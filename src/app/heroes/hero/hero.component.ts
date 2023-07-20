@@ -14,26 +14,20 @@ export class HeroComponent implements OnInit {
   get heroCode():Number{
     return this.HeroCode;
   }
-
   getHeroDescription():String{
     return `${this.Name} - ${this.Age}`;
   }
-
   changeHero(newHameHero:String){
     this.Name= newHameHero;
   }
-
   changeAge(newAgeHero:Number){
     this.Age= newAgeHero;
   }
-
   resetForm(){
     this.Name="Spiderman";
     this.Age=25;
   }
-
   constructor() { }
-
   ngOnInit(): void {
   }
 
