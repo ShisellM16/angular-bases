@@ -14,8 +14,6 @@ export class ListComponent implements OnInit {
     this.heroDeleted= this.heroNames.pop();
   }
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
