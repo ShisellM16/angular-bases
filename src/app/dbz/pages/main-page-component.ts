@@ -8,7 +8,17 @@ import {DbzService} from '../services/dbz.service.ts.service';
 })
 
 export class MainDbzComponent {
-    constructor(public dbzService: DbzService){
+    constructor(private dbzService: DbzService){}
 
+    get characters(): Character[]{
+        return [...this.dbzService.characters];
+    }
+
+    onDeleteCharater(id:string):void{
+        this.dbzService.onDeleteCharacterById(id);
+    };
+
+    onNewCharacter(character:Character):void{
+        this.dbzService.addCharacter(character);
     }
 }

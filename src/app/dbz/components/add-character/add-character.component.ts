@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
+import {DbzService} from '../../services/dbz.service.ts.service';
 
 @Component({
   selector: 'app-dbz-add-character',
@@ -23,9 +24,5 @@ export class AddCharacterComponent  {
 
     this.emitOnNewCharacter.emit(this.character);
     this.character= {name:'',power:0};
-
-    //limpiar
-    /*this.character.name= '';
-    this.character.power=0;*/
   }
 }
